@@ -1,0 +1,9 @@
+test: python3 convert_replica.py --input_dir /home/phien23/Workspace/data/room_0/imap/resize_00 --output_dir /home/phien23/mvsplat/datasets
+
+train: python3 convert_replica.py --input_dir /home/phien23/Workspace/data/room_0/imap/resize_01 --output_dir /home/phien23/mvsplat/datasets/replica
+
+python3 convert_dtu.py --input_dir /home/phien23/Workspace/data/dtu/train --output_dir /home/phien23/mvsplat/datasets/dtu
+
+python3 -m src.scripts.generate_evaluation_index
+
+python3 -m src.scripts.generate_replica_evaluation
